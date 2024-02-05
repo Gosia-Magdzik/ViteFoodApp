@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <header id="main-header">
         <div id="title">
-            <img src={logoImg} />
+            <img src={logoImg} alt="restaurant"/>
             <h1>Food Order Shop</h1>
         </div>
         <nav>

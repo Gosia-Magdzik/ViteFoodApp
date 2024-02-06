@@ -8,7 +8,7 @@ export const Meals = () => {
         async function fetchMeals () {
 
             const response = await fetch("http://localhost:3000/meals");
-            if (!response.ok) {
+            if (!response.ok) {           
                 //...
             }
             const meals = await response.json();  //JSON converted to JS

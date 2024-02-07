@@ -22,12 +22,7 @@ export const Meals = () => {
   return (
     <ul id="meals">
         {loadedMeals.map(meal => 
-            <>
-            <li key={meal.id}>
-                {meal.name}
-            </li>
-            <MealItem />
-            </>
+            <MealItem key={meal.id} meal={meal}/>
         )}
         
     </ul>

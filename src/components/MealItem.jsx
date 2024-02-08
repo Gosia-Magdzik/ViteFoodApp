@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { currencyFormatter } from '../util/formatting';
 
 export const MealItem = ({ meal }) => {
   return (
@@ -8,7 +9,7 @@ export const MealItem = ({ meal }) => {
             <div>
                 <h3>{meal.name}</h3> 
                 <p className='meal-item-price'>
-                    {meal.price}
+                    {currencyFormatter.format(meal.price * 4)}
                 </p>
                 <p className='meal-item-description'>
                     {meal.description}

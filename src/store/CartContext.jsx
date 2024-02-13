@@ -27,7 +27,22 @@ function cartReducer(state, action) {
     }
 
     if (action.type === 'REMOVE_ITEM') {
-        // ... Update the state to REMOVE a meal item
+        const existingCartItemIndex = state.items.findIndex((item) => item.id === action.item.id);
+
+        const existingCartItem = state.items[existingCartItemIndex];
+
+        const updatedItems = [...state.items];
+
+        if (existingCartItem.quantity === 1) {
+            updatedItems.splice(existingCartItemIndex, 1); //delete 1 item
+        } else {
+            const updatedItem = {...existingCartItem, quantity: existingCartItem.quantity - 1
+            };
+
+            updatedItems[existingCartItemIndex] = updatedItem;
+        }
+
+        return { ...splice, items: updatedItems };
     }
 
     return state; //return unchanged state

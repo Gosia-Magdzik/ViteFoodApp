@@ -3,7 +3,12 @@ import { currencyFormatter } from '../util/formatting';
 import { Button } from './UI/Button';
 
 export const MealItem = ({ meal }) => {
-  return (
+
+    function handleAddMealToCart() {
+
+    }
+
+    return (
     <li className="meal-item">
         <article>
             <img src={`http://localhost:3000/${meal.image}`} alt={meal.name}/>
@@ -17,7 +22,7 @@ export const MealItem = ({ meal }) => {
                 </p>
             </div>
             <p className='meal-item-actions'>
-                <Button>
+                <Button onClick={handleAddMealToCart}>
                     Add to Cart
                 </Button>
             </p>

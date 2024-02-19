@@ -7,8 +7,9 @@ function App() {
   return (
     <UserProgressContextProvider>
       <CartContextProvider>
-        <Header/>
-        <Meals/>
+        < Header />
+        < Meals />
+        < Cart />
       </CartContextProvider>
     </UserProgressContextProvider>
   );

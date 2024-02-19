@@ -28,11 +28,11 @@ export function UserProgressContextProvider({ children }) {
     }
 
     const userProgressCtx = {
-        process: userProgress,
+        progress: userProgress,
         showCart,
         hideCart,
         showCheckout,
-        hideCheckout,
+        hideCheckout
     };
 
     return (

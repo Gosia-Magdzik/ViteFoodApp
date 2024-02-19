@@ -27,10 +27,16 @@ export function UserProgressContextProvider({ children }) {
         setUserProgress('');
     }
 
-
+    const userProgressCtx = {
+        process: userProgress,
+        showCart,
+        hideCart,
+        showCheckout,
+        hideCheckout,
+    };
 
     return (
-        <UserProgressContext.Provider>
+        <UserProgressContext.Provider value={userProgressCtx}>
             {children}
         </UserProgressContext.Provider>
     );

@@ -15,8 +15,8 @@ export default function Cart() {
     );
 
     function handleCloseCart() {
-        UserProgressContext.hideCart();
-    }
+        userProgressCtx.hideCart();
+    }                       
 
     return (
         <Modal 

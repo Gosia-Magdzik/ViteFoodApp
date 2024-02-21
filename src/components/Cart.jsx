@@ -45,11 +45,16 @@ export default function Cart() {
                 >
                     Close
                 </Button>
-                <Button
-                    onClick={handleCloseCart}
+                {cartCtx.items.length > 0 
+                ? 
+                (<Button
+                onClick={handleCloseCart}
                 >
-                    Go to Checkout
-                </Button>
+                Go to Checkout
+                </Button>)
+                : null
+                }
+
             </p>
         </Modal>
     )

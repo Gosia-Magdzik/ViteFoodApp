@@ -27,7 +27,10 @@ export default function Cart() {
             <h2>Your Cart</h2>
             <ul>
                 {cartCtx.items.map(item => 
-                    < CartItem key={item.id} {...item} />
+                    < CartItem 
+                        key={item.id} 
+                        {...item} 
+                    />
                 )}
             </ul>
             <p className='cart-total'>

@@ -3,11 +3,11 @@ import { currencyFormatter } from '../util/formatting';
 
 export const CartItem = ({ name, quantity, price }) => {
   return (
-    <li className='catt-item'>
+    <li className='cart-item'>
         <p>
             {name} - {quantity} x {currencyFormatter.format(price)}
         </p>
-        <p className='catt-item-actions'>
+        <p className='cart-item-actions'>
             <button>-</button>
             <span>{quantity}</span>
             <button>+</button>

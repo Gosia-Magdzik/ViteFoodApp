@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { currencyFormatter } from '../util/formatting';
 
-export const CartItem = ({ item }) => {
+export const CartItem = ({ name, quantity, price }) => {
   return (
     <li className='catt-item'>
         <p>
-            NAME - QTY x PRICE
+            {name} - {quantity} x {currencyFormatter.format(price)}
         </p>
         <p className='catt-item-actions'>
             <button>-</button>
-            <span>QTY</span>
+            <span>{quantity}</span>
             <button>+</button>
         </p>
     </li>

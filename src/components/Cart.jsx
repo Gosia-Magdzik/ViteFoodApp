@@ -29,7 +29,9 @@ export default function Cart() {
                 {cartCtx.items.map(item => 
                     < CartItem 
                         key={item.id} 
-                        {...item} 
+                        {...item}
+                        onIncrease={() => cartCtx.addItem(item)}
+                        onDecrease={() => cartCtx.removeItem(item.id)} 
                     />
                 )}
             </ul>

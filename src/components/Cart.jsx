@@ -52,9 +52,9 @@ export default function Cart() {
                 >
                 Go to Checkout
                 </Button>)
-                : null
+                :
+                null
                 }
-
             </p>
         </Modal>
     )

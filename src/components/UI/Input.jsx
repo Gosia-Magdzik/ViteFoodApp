@@ -1,7 +1,10 @@
 import React from 'react'
 
-export const Input = () => {
+export const Input = ({label, id,}) => {
   return (
-    <div>Input</div>
+    <p className='control'>
+        <label htmlFor={id}>{label}</label>
+        <input id={id} name={id} />
+    </p>
   )
 }

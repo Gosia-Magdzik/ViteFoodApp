@@ -14,6 +14,10 @@ export const Checkout = () => {
         (totalPrice, item) => totalPrice + item.quantity * item.price, 0
     );
 
+    function handleClose() {
+        userProgressCtx.hideCheckout();
+    }
+
     return (
         <Modal open={userProgressCtx.progress === 'checkout'}>
             <form>
@@ -47,7 +51,13 @@ export const Checkout = () => {
                     />      
                 </div>
                 <p className='modal-actions'>
-                    <Button type='button' textOnly>Close</Button>
+                    <Button 
+                        type='button' 
+                        textOnly
+                        onClick={handleClose}
+                    >
+                        Close
+                    </Button>
                     <Button>Submit Order</Button>
                 </p>
             </form>

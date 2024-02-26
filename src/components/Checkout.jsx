@@ -34,7 +34,7 @@ export const Checkout = () => {
                     id="email"
                 />
                 <Input 
-                    label="E-Mail Address"
+                    label="Street"
                     type="text"
                     id="street"
                 />

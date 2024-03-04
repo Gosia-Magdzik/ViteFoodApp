@@ -28,12 +28,16 @@ export default function useHttp(url, config) {
     }, [url, config])
 
     useEffect(() => {
-        sendRequest();
-    }, [sendRequest]);
+        if (config && config.method === 'GET') {
+            sendRequest();
+        }
+        
+    }, [sendRequest, config]);
 
     return {
         data,
         isLoading,
-        error
+        error,
+        sendRequest
     }
 }
